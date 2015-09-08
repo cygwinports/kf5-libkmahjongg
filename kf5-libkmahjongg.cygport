@@ -1,0 +1,21 @@
+inherit kf5
+
+NAME="kf5-libkmahjongg"
+VERSION=15.04.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE Mahjongg game library"
+# this is shipped with applications, not frameworks
+SRC_URI="mirror://kde/stable/applications/${VERSION}/src/libkmahjongg-${VERSION}.tar.xz"
+SRC_DIR="libkmahjongg-${VERSION}"
+
+PKG_NAMES="libKF5KMahjongglib5 libKF5KMahjongglib-common libKF5KMahjongglib-devel"
+libKF5KMahjongglib5_REQUIRES="libKF5KMahjongglib-common"
+libKF5KMahjongglib5_CONTENTS="usr/bin/cygKF5KMahjongglib-5.dll"
+libKF5KMahjongglib_common_CONTENTS="usr/share/doc/ usr/share/kmahjongglib/"
+libKF5KMahjongglib_devel_REQUIRES="libKF5ConfigWidgets-devel libQt5Gui-devel"
+libKF5KMahjongglib_devel_CONTENTS="
+	usr/include/KF5/KF5KMahjongg/
+	usr/lib/cmake/KF5KMahjongglib/
+	usr/lib/libKF5KMahjongglib.dll.a
+"
