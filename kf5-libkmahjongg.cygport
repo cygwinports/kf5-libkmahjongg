@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kf5-libkmahjongg"
-VERSION=16.08.3
+VERSION=17.04.3
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE Mahjongg game library"
@@ -9,7 +9,11 @@ SUMMARY="KDE Mahjongg game library"
 PKG_NAMES="libKF5KMahjongglib5 libKF5KMahjongglib-common libKF5KMahjongglib-devel"
 libKF5KMahjongglib5_REQUIRES="libKF5KMahjongglib-common"
 libKF5KMahjongglib5_CONTENTS="usr/bin/cygKF5KMahjongglib-5.dll"
-libKF5KMahjongglib_common_CONTENTS="usr/share/doc/ usr/share/kmahjongglib/"
+libKF5KMahjongglib_common_CONTENTS="
+	usr/share/doc/
+	usr/share/kmahjongglib/
+	usr/share/locale/*/LC_MESSAGES/libkmahjongg5.mo
+"
 libKF5KMahjongglib_devel_REQUIRES="libKF5ConfigWidgets-devel libQt5Gui-devel"
 libKF5KMahjongglib_devel_CONTENTS="
 	usr/include/KF5/KF5KMahjongg/
